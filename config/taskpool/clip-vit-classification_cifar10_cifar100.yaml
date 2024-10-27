@@ -1,0 +1,18 @@
+type: clip_vit_classification
+name: clip-vit-classification_cifar10_cifar100
+
+dataset_type: huggingface_image_classification
+tasks:
+  - name: cifar10
+    dataset:
+      name: tanganke/cifar10
+      split: test
+  - name: cifar100
+    dataset:
+      name: tanganke/cifar100
+      split: test
+
+clip_model: openai/clip-vit-base-patch32
+batch_size: 128
+num_workers: 16
+fast_dev_run: ${fast_dev_run}

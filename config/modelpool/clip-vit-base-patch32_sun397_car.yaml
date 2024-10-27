@@ -1,0 +1,30 @@
+type: huggingface_clip_vision
+models:
+  - name: _pretrained_
+    path: openai/clip-vit-base-patch32
+  - name: sun397
+    path: /home/enneng/fusion_bench/outputs/checkpoints/ViT-B-32/full_finetune_maskadam_lr_0_00001_step_2000/huggingface/clip-vit-base-patch32_sun397
+  - name: stanford_cars
+    path: /home/enneng/fusion_bench/outputs/checkpoints/ViT-B-32/full_finetune_maskadam_lr_0_00001_step_2000/huggingface/clip-vit-base-patch32_stanford_cars
+
+# The following datasets are used for test-time adaptation
+dataset_type: huggingface_image_classification
+tta_datasets:
+  - name: sun397
+    dataset:
+      name: tanganke/sun397
+      split: test
+  - name: stanford_cars
+    dataset:
+      name: tanganke/stanford_cars
+      split: test
+
+train_datasets:
+  - name: sun397
+    dataset:
+      name: tanganke/sun397
+      split: train
+  - name: stanford_cars
+    dataset:
+      name: tanganke/stanford_cars
+      split: train

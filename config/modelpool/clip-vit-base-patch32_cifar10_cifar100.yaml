@@ -1,0 +1,30 @@
+type: huggingface_clip_vision
+models:
+  - name: _pretrained_
+    path: openai/clip-vit-base-patch32
+  - name: cifar10
+    path: /home/enneng/fusion_bench/outputs/checkpoints/ViT-B-32/full_finetune_gsam_0_5_lr_0_00001_step_2000/huggingface/clip-vit-base-patch32_cifar10
+  - name: cifar100
+    path: /home/enneng/fusion_bench/outputs/checkpoints/ViT-B-32/full_finetune_gsam_0_5_lr_0_00001_step_2000/huggingface/clip-vit-base-patch32_cifar100
+
+# The following datasets are used for test-time adaptation
+dataset_type: huggingface_image_classification
+tta_datasets:
+  - name: cifar10
+    dataset:
+      name: tanganke/cifar10
+      split: test
+  - name: cifar100
+    dataset:
+      name: tanganke/cifar100
+      split: test
+
+train_datasets:
+  - name: cifar10
+    dataset:
+      name: tanganke/cifar10
+      split: train
+  - name: cifar100
+    dataset:
+      name: tanganke/cifar100
+      split: train
