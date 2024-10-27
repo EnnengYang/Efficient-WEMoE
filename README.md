@@ -1,5 +1,5 @@
 # Efficient-WEMoE
-Efficient and Effective Weight-Ensembling Mixture of Experts for Multi-Task Model Merging
+[//]: # ( and Effective Weight-Ensembling Mixture of Experts for Multi-Task Model Merging)
 
 [//]: # (<center>)
 [//]: # (<img src="./EWEMoE.png" alt="Efficient Weight-Ensembling MoE" width="800"/>)
