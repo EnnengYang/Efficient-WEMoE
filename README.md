@@ -7,6 +7,21 @@
 
 ---
 
+
+## Abstract
+
+> Multi-task learning (MTL) leverages a shared model to accomplish multiple tasks and facilitate knowledge transfer. Recent research on task arithmetic-based MTL demonstrates that merging the parameters of independently fine-tuned models can effectively achieve MTL. However, existing merging methods primarily seek a static optimal solution within the original model parameter space, which often results in performance degradation due to the inherent diversity among tasks and potential interferences. To address this challenge, in this paper, we propose a Weight-Ensembling Mixture of Experts (WEMoE) method for multi-task model merging. Specifically, we first identify critical (or sensitive) modules by analyzing parameter variations in core modules of Transformer-based models before and after finetuning. Then, our WEMoE statically merges non-critical modules while transforming critical modules into a mixture-of-experts (MoE) structure. During inference, expert modules in the MoE are dynamically merged based on input samples, enabling a more flexible and adaptive merging approach. Building on WEMoE, we further introduce an efficient-and-effective WEMoE (E-WEMoE) method, whose core mechanism involves eliminating non-essential elements in the critical modules of WEMoE and implementing shared routing across multiple MoE modules, thereby significantly reducing both the trainable parameters, the overall parameter count, and computational overhead of the merged model by WEMoE. Experimental results across various architectures and tasks demonstrate that both WEMoE and E-WEMoE outperform state-of-the-art (SOTA) model merging methods in terms of MTL performance, generalization, and robustness.
+
+<center>
+<img width="885" alt="image" src="https://github.com/user-attachments/assets/c2fbf30d-30a1-4dfa-9e5b-5f5b839e9750">
+</center>
+
+<center>
+<img width="470" alt="image" src="https://github.com/user-attachments/assets/2bcb99e5-07e5-4d7a-953b-518c686d79a0">
+</center>
+
+---
+
 ## Installation
 
 This project relies on [FusionBench-v0.1.6](https://github.com/tanganke/fusion_bench). Please refer to it to configure the base environment.
