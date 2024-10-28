@@ -11,14 +11,16 @@
 
 This project relies on [FusionBench-v0.1.6](https://github.com/tanganke/fusion_bench). Please refer to it to configure the base environment.
 
-> *Note: Our code is also integrated into [FusionBench-V0.2.1](https://github.com/tanganke/fusion_bench/tree/main/examples/sparse_we_moe).*
-
 ```bash
 git clone https://github.com/EnnengYang/Efficient-WEMoE
 cd fusion_bench
 
 pip install -e . # install the package in editable mode
 ```
+
+> [!Note]
+> Our code is also integrated into [FusionBench-V0.2.2](https://github.com/tanganke/fusion_bench/tree/main/examples/sparse_we_moe).
+> Refer to [https://github.com/tanganke/fusion_bench](https://github.com/tanganke/fusion_bench) for more information.
 
 ---
 
